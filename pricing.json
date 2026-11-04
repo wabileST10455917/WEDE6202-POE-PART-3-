@@ -1,0 +1,16 @@
+{
+  "items": {
+    "sneakers":    { "label": "Sneakers & trainers",        "group": "shoes",   "price": 699,  "unit": "per pair", "availability": "In stock",         "lead": "Available today in-store",            "unavailableSizes": [12, 13] },
+    "formal":      { "label": "Leather & office shoes",     "group": "shoes",   "price": 1199, "unit": "per pair", "availability": "In stock",         "lead": "Available today in-store",            "unavailableSizes": [3, 13] },
+    "school":      { "label": "School & everyday shoes",    "group": "shoes",   "price": 449,  "unit": "per pair", "availability": "In stock",         "lead": "Available today in-store",            "unavailableSizes": [] },
+    "boots":       { "label": "Handcrafted leather boots",  "group": "shoes",   "price": 1650, "unit": "per pair", "availability": "Made to order",    "lead": "Ready in about 7 working days",       "unavailableSizes": [] },
+    "resole":      { "label": "Resoling",                   "group": "repairs", "price": 320,  "unit": "per pair", "availability": "Bench open",       "lead": "Ready in 3-5 working days",           "unavailableSizes": [] },
+    "restitch":    { "label": "Restitching",                "group": "repairs", "price": 180,  "unit": "per pair", "availability": "Bench open",       "lead": "Ready in 3-5 working days",           "unavailableSizes": [] },
+    "polish":      { "label": "Polish & condition",         "group": "repairs", "price": 110,  "unit": "per pair", "availability": "Bench open",       "lead": "Ready in 2-3 working days",           "unavailableSizes": [] },
+    "zip":         { "label": "Zip & lace repair",          "group": "repairs", "price": 95,   "unit": "per pair", "availability": "Bench open",       "lead": "Ready in 3-5 working days",           "unavailableSizes": [] },
+    "fitting":     { "label": "Guided foot fitting",        "group": "services","price": 0,    "unit": "free",     "availability": "Walk-ins welcome", "lead": "About 20 minutes, no booking needed", "unavailableSizes": [] },
+    "delivery":    { "label": "Local delivery (Nelspruit & Mbombela)", "group": "services", "price": 45, "unit": "flat rate (free over R700)", "availability": "Available", "lead": "1-2 working days", "unavailableSizes": [] }
+  },
+  "freeDeliveryThreshold": 700,
+  "openDays": [1, 2, 3, 4, 5, 6]
+}

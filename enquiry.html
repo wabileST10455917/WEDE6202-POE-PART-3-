@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry | Whole Shoes Nduna</title>
+<meta name="description" content="Send Whole Shoes Nduna in Nelspruit a product, service or repair enquiry and hear back within one working day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">WSN</span>
+      <span class="brand-text">
+        <strong>Whole Shoes Nduna</strong>
+        <span>Nelspruit · Mpumalanga</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">☰ <span class="sr-only">Toggle menu</span></button>
+    <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="header-cta" href="enquiry.html">Book a Fitting</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <div class="container">
+      <div class="banner-copy">
+        <span class="crumb"><a href="index.html">Home</a> / Enquiry</span>
+        <h1 id="banner-heading">Make an Enquiry</h1>
+        <p>Ask about stock, sizing or repairs. A member of our small team replies within one working day.</p>
+      </div>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?fm=jpg&amp;q=80&amp;auto=format&amp;fit=crop&amp;w=1200" srcset="https://images.unsplash.com/photo-1521791136064-7986c2920216?fm=jpg&amp;q=80&amp;auto=format&amp;fit=crop&amp;w=640 640w, https://images.unsplash.com/photo-1521791136064-7986c2920216?fm=jpg&amp;q=80&amp;auto=format&amp;fit=crop&amp;w=960 960w, https://images.unsplash.com/photo-1521791136064-7986c2920216?fm=jpg&amp;q=80&amp;auto=format&amp;fit=crop&amp;w=1400 1400w, https://images.unsplash.com/photo-1521791136064-7986c2920216?fm=jpg&amp;q=80&amp;auto=format&amp;fit=crop&amp;w=1920 1920w" sizes="(max-width: 900px) 100vw, 50vw" alt="Two people shaking hands, representing the personal, service-led approach Whole Shoes Nduna takes with every enquiry.">
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="form-heading">
+    <div class="container grid grid-2" style="align-items:start; gap:44px;">
+
+      <!-- ============ ENQUIRY FORM ============ -->
+      <div>
+        <h2 id="form-heading">Product &amp; service enquiry form</h2>
+        <p class="required-note">Fields marked with an asterisk (*) are required.</p>
+
+        <form class="form-card" id="enquiry-form" action="enquiry.html" method="get" novalidate>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="eq-name">Full name *</label>
+              <input type="text" id="eq-name" name="name" required minlength="2" maxlength="60" autocomplete="name">
+              <span class="field-error" id="eq-name-error" role="alert" hidden></span>
+            </div>
+            <div class="field">
+              <label for="eq-email">Email address *</label>
+              <input type="email" id="eq-email" name="email" required maxlength="100" autocomplete="email">
+              <span class="field-error" id="eq-email-error" role="alert" hidden></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="eq-phone">Phone number (optional)</label>
+            <input type="tel" id="eq-phone" name="phone" inputmode="tel" maxlength="16" autocomplete="tel" placeholder="e.g. 082 123 4567"
+                   pattern="^(\+27|0)[1-9][0-9]{8}$">
+            <span class="field-error" id="eq-phone-error" role="alert" hidden></span>
+          </div>
+
+          <div class="field">
+            <label for="eq-item">What would you like to enquire about? *</label>
+            <select id="eq-item" name="item" required>
+              <option value="">Choose one…</option>
+              <optgroup label="Shoes">
+                <option value="sneakers" data-group="shoes">Sneakers &amp; trainers</option>
+                <option value="formal" data-group="shoes">Leather &amp; office shoes</option>
+                <option value="school" data-group="shoes">School &amp; everyday shoes</option>
+                <option value="boots" data-group="shoes">Handcrafted leather boots</option>
+              </optgroup>
+              <optgroup label="Repairs">
+                <option value="resole" data-group="repairs">Resoling</option>
+                <option value="restitch" data-group="repairs">Restitching</option>
+                <option value="polish" data-group="repairs">Polish &amp; condition</option>
+                <option value="zip" data-group="repairs">Zip &amp; lace repair</option>
+              </optgroup>
+              <optgroup label="Services">
+                <option value="fitting" data-group="services">Guided foot fitting</option>
+                <option value="delivery" data-group="services">Local delivery</option>
+              </optgroup>
+            </select>
+            <span class="field-error" id="eq-item-error" role="alert" hidden></span>
+          </div>
+
+          <div class="form-row">
+            <div class="field" id="eq-size-row" hidden>
+              <label for="eq-size">Shoe size (UK) *</label>
+              <select id="eq-size" name="size">
+                <option value="">Choose…</option>
+                <option>3</option><option>4</option><option>5</option><option>6</option><option>7</option>
+                <option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option>
+              </select>
+              <span class="field-error" id="eq-size-error" role="alert" hidden></span>
+            </div>
+            <div class="field">
+              <label for="eq-qty">Quantity (pairs) *</label>
+              <input type="number" id="eq-qty" name="quantity" min="1" max="10" step="1" value="1" required inputmode="numeric">
+              <span class="field-error" id="eq-qty-error" role="alert" hidden></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field" id="eq-fulfil-row" hidden>
+              <label for="eq-fulfil">Collect or deliver?</label>
+              <select id="eq-fulfil" name="fulfilment">
+                <option value="collect">Collect in store (free)</option>
+                <option value="delivery">Local delivery</option>
+              </select>
+              <span class="field-error" id="eq-fulfil-error" role="alert" hidden></span>
+            </div>
+            <div class="field">
+              <label for="eq-date">Preferred visit / collection date</label>
+              <input type="date" id="eq-date" name="date">
+              <span class="field-error" id="eq-date-error" role="alert" hidden></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="eq-notes">Anything else we should know? (optional)</label>
+            <span class="hint">Colour, width, school name — up to 500 characters.</span>
+            <textarea id="eq-notes" name="notes" maxlength="500"></textarea>
+            <span class="field-error" id="eq-notes-error" role="alert" hidden></span>
+          </div>
+
+          <div class="check-row">
+            <input type="checkbox" id="eq-consent" name="consent" required>
+            <label for="eq-consent" style="text-transform:none; font-family:inherit; font-size:.9rem; letter-spacing:0;">I agree that Whole Shoes Nduna may reply to me about this enquiry. *</label>
+          </div>
+          <span class="field-error" id="eq-consent-error" role="alert" hidden></span>
+
+          <button type="submit" class="btn btn-primary" style="margin-top:1rem;">Get my quote</button>
+          <div class="form-msg" role="status" aria-live="polite"></div>
+        </form>
+
+        <!-- The quote is written into this box by script.js after the AJAX request -->
+        <div class="form-card result-card" id="enquiry-result" aria-live="polite" hidden></div>
+      </div>
+
+      <!-- ============ SIDE INFO ============ -->
+      <aside>
+        <div class="card" style="margin-bottom:24px;">
+          <h3>What happens after you submit</h3>
+          <div class="feature"><span class="idx">1</span><p>Your enquiry reaches the shop directly — we're a single store, so it always lands with the right person.</p></div>
+          <div class="feature"><span class="idx">2</span><p>Bradley Vuma or another team member checks stock, sizing or repair availability.</p></div>
+          <div class="feature"><span class="idx">3</span><p>We reply by email or phone, usually within one working day, to confirm next steps.</p></div>
+        </div>
+        <div class="card">
+          <h3>Prefer to talk now?</h3>
+          <p>Call us directly during trading hours, or visit the Contact page for our address and a map.</p>
+          <p><a class="btn btn-outline" href="tel:+27134500198">Call +27 13 450 0198</a></p>
+          <p style="margin-top:10px;"><a href="contact.html">See store details &amp; map →</a></p>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ============ REFERENCES (Harvard style) ============ -->
+  <section class="references" aria-labelledby="refs-heading">
+    <div class="container">
+      <h2 id="refs-heading">References</h2>
+      <p>The photograph used on this page is reproduced under the Unsplash License and is credited below in Harvard style.</p>
+      <ol>
+        <li>Cytonn Photography (2018) <cite>Two people shaking hands</cite> [Photograph]. Unsplash. Available at: https://unsplash.com/photos/two-people-shaking-hands-n95VMLxqM2I (Accessed: 14 August 2026).</li>
+      </ol>
+      <p class="ref-note">This photograph is used for illustrative, non-commercial educational purposes under the terms of the Unsplash License, which permits free use without attribution; a credit is provided regardless, in Harvard style, for academic transparency.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <strong>Whole Shoes Nduna</strong>
+        <p>A small, family-run footwear store in Nelspruit, Mpumalanga. Every pair, properly fitted.</p>
+        <div class="social-row" aria-label="Social media">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="X / Twitter">x</a>
+        </div>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#retail">Retail &amp; fitting</a></li>
+          <li><a href="services.html#repair">Repair &amp; restoration</a></li>
+          <li><a href="services.html#delivery">Delivery &amp; collection</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <ul>
+          <li>Ilanga Mall, Nelspruit, Mpumalanga</li>
+          <li><a href="tel:+27134500198">+27 13 450 0198</a></li>
+          <li><a href="mailto:hello@wholeshoesnduna.co.za">hello@wholeshoesnduna.co.za</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Whole Shoes Nduna. All rights reserved.</span>
+      <span>Student project website — imagery credited in <a href="#refs-heading">References</a> on each page.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

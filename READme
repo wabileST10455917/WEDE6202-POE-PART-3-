@@ -1,0 +1,253 @@
+# Whole Shoes Nduna — Website
+
+A small, single-branch website for **Whole Shoes Nduna**, a fictional family-run
+footwear store in Ilanga Mall, Nelspruit, Mpumalanga, South Africa.
+
+## File & folder structure
+
+```
+root/
+├── index.html      Home — hero, brand introduction, featured categories, sitemap
+├── about.html       About Us — history, mission/vision, timeline, team
+├── services.html    Services — retail & fitting, repair, delivery/collection
+├── products.html     Products — photo gallery of the athletic, formal & handcrafted ranges
+├── enquiry.html      Enquiry — product/service enquiry form
+├── contact.html      Contact — store address, embedded map, hours, contact form
+├── README.md
+├── css/
+│   └── style.css     Single shared stylesheet (design tokens, layout, components)
+├── js/
+│   └── script.js      Shared behaviour: mobile nav toggle, form validation
+└── images/            (unused — all imagery is hotlinked from Unsplash; see below)
+```
+
+The brief asked for a minimum of five pages; this build includes **six**
+(Home, About, Services, Products, Enquiry, Contact). The extra page, Products, is a
+photo gallery of the ranges in-store and is documented here as required.
+
+## Business changes reflected in this build
+
+- Single branch only, at Ilanga Mall, Nelspruit, Mpumalanga (previously two branches).
+- Team names throughout (About and Contact pages) are: Alfred Dunhill (Founder & Owner),
+  Peter Mabuza (Store Manager), Nonhle Dube (Fitting Specialist), Siyanda Makhosi (Head
+  Cobbler & Repairs) and Bradley Vuma (Sales & Customer Care). These are fictional names
+  created for this student project; no photographs of real people are used to represent
+  them — team "photos" are CSS-generated initials avatars instead.
+- The Contact page has one location card (map + address) rather than two, per the
+  request for a single-branch, basic shoe store rather than a larger multi-branch chain.
+- The Services page no longer includes a corporate/bulk-order section, to keep the
+  business scope appropriately small.
+
+# Whole Shoes Nduna — Website
+
+A small, single-branch website for **Whole Shoes Nduna**, a fictional family-run
+footwear store in Ilanga Mall, Nelspruit, Mpumalanga, South Africa.
+
+**Part 1** covered the HTML structure and content. **Part 2** (this update) covers the
+CSS styling, layout, typography, colour scheme, and responsive/accessible behaviour
+across desktop, tablet and mobile — see the Changelog and the "Part 2" section below.
+
+## File & folder structure
+
+```
+root/
+├── index.html      Home — hero, brand introduction, featured categories, sitemap
+├── about.html       About Us — history, mission/vision, timeline, team
+├── services.html    Services — retail & fitting, repair, delivery/collection
+├── products.html     Products — photo gallery of the athletic, formal & handcrafted ranges
+├── enquiry.html      Enquiry — product/service enquiry form
+├── contact.html      Contact — store address, embedded map, hours, contact form
+├── README.md
+├── css/
+│   └── style.css     Single shared stylesheet (design tokens, layout, components)
+├── js/
+│   └── script.js      Shared behaviour: mobile nav toggle, form validation
+└── images/
+    └── screenshots/    Desktop/tablet/mobile evidence screenshots for Part 2 (see below)
+```
+
+The brief asked for a minimum of five pages; this build includes **six**
+(Home, About, Services, Products, Enquiry, Contact). The extra page, Products, is a
+photo gallery of the ranges in-store and is documented here as required.
+
+## Business changes reflected in this build
+
+- Single branch only, at Ilanga Mall, Nelspruit, Mpumalanga (previously two branches).
+- Team names throughout (About and Contact pages) are: Alfred Dunhill (Founder & Owner),
+  Peter Mabuza (Store Manager), Nonhle Dube (Fitting Specialist), Siyanda Makhosi (Head
+  Cobbler & Repairs) and Bradley Vuma (Sales & Customer Care). These are fictional names
+  created for this student project; no photographs of real people are used to represent
+  them — team "photos" are CSS-generated initials avatars instead.
+- The Contact page has one location card (map + address) rather than two, per the
+  request for a single-branch, basic shoe store rather than a larger multi-branch chain.
+- The Services page no longer includes a corporate/bulk-order section, to keep the
+  business scope appropriately small.
+
+## Part 2: CSS styling, layout and responsive design
+
+All styling lives in one external stylesheet, `css/style.css`, linked from every page
+with `<link rel="stylesheet" href="css/style.css">` — no inline `style` attributes or
+`<style>` blocks are used for layout, so the cascade only has to be reasoned about in
+one place.
+
+**Reset & base style.** The file opens with a small universal reset (`box-sizing:
+border-box`, margins/padding zeroed, list styles removed, images capped at `max-width:
+100%`) so every browser starts from the same baseline, followed by base rules for
+`body`, headings, links and the `.container` wrapper.
+
+**Colour scheme.** A warm, leather-and-craft palette held in CSS custom properties in
+`:root` — espresso brown for the header/footer, parchment cream for the page
+background, saddle-leather brown for primary actions, and an ochre gold accent used
+for the stitched-line dividers that run through the site. Keeping every colour as a
+variable (`var(--saddle)`, etc.) means the whole palette can be re-tuned from one
+place, and it keeps contrast consistent across pages.
+
+**Typography.** Three families with distinct jobs — Fraunces (a warm slab-serif) for
+headings, Work Sans for body copy, and IBM Plex Mono for labels, prices and
+navigation — set from a documented, `rem`-based type scale (`--fs-000` through
+`--fs-4`, see the comment block at the top of `style.css`). Using `rem` rather than
+fixed pixel sizes means the type scales correctly if a visitor increases their
+browser's default font size, which matters for readability and accessibility.
+
+**Layout.** Built with CSS Grid for page-level structure (the hero, page banners, card
+grids, the project charter-style tables) and Flexbox for one-dimensional groupings
+(the header bar, buttons, feature lists), using `display`, `grid-template-columns`,
+`flex-direction`, `justify-content` and `align-items` throughout, per the brief.
+
+**Visual styles & interactive states.** Buttons, links and form fields use `color`,
+`background-color`, `border` and `box-shadow` for visual styling, and every
+interactive element has distinct `:hover`, `:focus-visible` and `:active` states —
+not just `:hover` — so the site is usable with a mouse, a keyboard, or a
+switch/assistive device.
+
+**Responsive design.** Two clear, documented breakpoints are used consistently across
+the whole stylesheet instead of ad-hoc values per component:
+
+| Breakpoint | Width | What changes |
+|---|---|---|
+| Desktop | default (no media query), > 900px | Multi-column grids, full horizontal nav |
+| Tablet | `max-width: 900px` | Grids collapse to two columns; nav switches to the ☰ toggle menu |
+| Mobile | `max-width: 600px` | Everything collapses to a single column; spacing and section padding is tightened |
+
+Spacing (padding/margins/gaps) and font sizes are set in `rem`/`em` rather than fixed
+pixels wherever they affect the overall proportions of the page, and widths use `%`
+(`width:100%`, `max-width:100%`) so elements resize fluidly between breakpoints rather
+than only snapping at the two media-query boundaries. Headings use `clamp()` so their
+size flows smoothly with the viewport instead of jumping abruptly at a breakpoint.
+
+**Responsive images.** Every `<img>` on the site now carries a `srcset` with four image
+widths (640/960/1400/1920px) and a `sizes` attribute describing how much of the
+viewport that image actually occupies at each breakpoint, so a phone downloads a
+640px-wide image instead of the same 1920px file a desktop gets. This follows the
+standard responsive-images pattern documented by MDN (Mozilla, 2025).
+
+**Accessibility.** A skip-to-content link, a visible focus ring (`:focus-visible`) on
+every interactive element, `aria-current="page"` on the active nav link, `aria-label`s
+on icon-only controls, semantic landmark elements (`header`, `nav`, `main`, `footer`),
+descriptive `alt` text on every image, and a `prefers-reduced-motion` media query that
+switches off smooth-scrolling and transitions for visitors who have asked their
+operating system to reduce motion (W3C WAI, 2023).
+
+### Screenshot evidence (desktop / tablet / mobile)
+
+`images/screenshots/` contains real browser renders of all six pages at three
+viewport sizes, captured with a headless Chromium browser:
+
+- **Desktop** — 1440 × 900
+- **Tablet** — 768 × 1024 (a common portrait iPad width)
+- **Mobile** — 390 × 844 (a common modern phone width)
+
+Files are named `<page>__<breakpoint>.png`, e.g. `index__mobile.png`,
+`services__tablet.png`. These were captured in a sandboxed environment without
+internet access, so the Google Fonts and Unsplash photographs appear as browser
+fallback fonts and broken-image placeholders in the captures — the layout, spacing,
+grid collapsing and navigation behaviour they demonstrate is unaffected by that and
+is exactly what renders once the page loads with a normal internet connection.
+Re-capturing them on a normal connection (or simply resizing a real browser window
+and using your browser's own screenshot/device-toolbar tools) will show the finished
+photographs and fonts in place, if you would like fresh images for submission.
+
+## Changelog
+
+### Version 2 — CSS styling & responsive design (this submission)
+- Added a documented `rem`-based typographic scale and spacing scale as CSS custom
+  properties, replacing scattered fixed-pixel font sizes and paddings.
+- Added an explicit CSS reset block at the top of `style.css`.
+- Consolidated every media query in the stylesheet onto two documented breakpoints
+  (900px tablet, 600px mobile) instead of the mixed 520/640/820/860px values used
+  ad hoc in Part 1.
+- Added `srcset`/`sizes` to every image on the site for responsive image loading.
+- Added explicit `:active` states to buttons and navigation links (previously only
+  `:hover`/`:focus-visible` were styled).
+- Added a `prefers-reduced-motion` media query for accessibility.
+- Converted card images from a fixed pixel height to `aspect-ratio`, so they scale
+  proportionally rather than cropping differently at different widths.
+- Captured and added desktop/tablet/mobile screenshot evidence for all six pages
+  (see `images/screenshots/`).
+- Updated this README with the Part 2 documentation and reference list below.
+
+### Version 1 — HTML structure & content (Part 1)
+- Initial six-page build: Home, About, Services, Products, Enquiry, Contact.
+- Semantic HTML structure, navigation, forms, and Harvard-referenced imagery on every
+  page (see each page's own References section).
+
+## Images & referencing
+
+All photographs are sourced from Unsplash and used under the Unsplash License (free to
+use, attribution not legally required but provided regardless). Every page that contains
+a photograph carries its own **References** section in Harvard style, listed
+alphabetically by author surname, immediately above the footer. The Google Maps embed on
+the Contact page is credited the same way.
+
+Because the site is a static HTML/CSS/JS build with no backend, images are referenced by
+their direct Unsplash CDN URL rather than downloaded into `images/`; that folder now
+holds the Part 2 screenshot evidence instead (see above).
+
+## References (general — techniques used to complete Part 2)
+
+These are general technical references for the CSS/responsive-design techniques
+applied across the stylesheet, as distinct from the per-page photograph references
+already listed on each HTML page.
+
+Mozilla (2025) *Responsive images*. MDN Web Docs. Available at:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images
+(Accessed: 16 September 2026).
+
+Mozilla (2025) *Using CSS custom properties (variables)*. MDN Web Docs. Available at:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+(Accessed: 16 September 2026).
+
+Mozilla (2025) *prefers-reduced-motion*. MDN Web Docs. Available at:
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+(Accessed: 16 September 2026).
+
+Mozilla (2025) *Using media queries*. MDN Web Docs. Available at:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+(Accessed: 16 September 2026).
+
+Unsplash (n.d.) *Unsplash License*. Available at: https://unsplash.com/license
+(Accessed: 16 September 2026).
+
+W3C Web Accessibility Initiative (2023) *Web Content Accessibility Guidelines (WCAG)
+2.2*. Available at: https://www.w3.org/TR/WCAG22/ (Accessed: 16 September 2026).
+
+## Navigation
+
+The navigation menu in the `<header>` is identical on all six pages and uses relative
+links (`index.html`, `about.html`, `services.html`, `products.html`, `enquiry.html`,
+`contact.html`), so it functions correctly regardless of which page it is opened from.
+The current page is marked with `aria-current="page"` for accessibility.
+
+## Forms
+
+Both the Enquiry form and the general Contact form perform client-side validation only
+(`js/script.js`) — there is no backend, so submissions are not actually transmitted
+anywhere. Submitting a valid form shows a confirmation message; an incomplete form shows
+an inline error message instead.
+
+## Browser & device testing
+
+Built with standard HTML5 semantic elements (`header`, `nav`, `main`, `section`,
+`article`, `footer`) and CSS Grid/Flexbox with fallbacks. Layout and responsive
+behaviour were verified with a headless Chromium browser at desktop, tablet and mobile
+viewport widths (see Screenshot evidence, above)
